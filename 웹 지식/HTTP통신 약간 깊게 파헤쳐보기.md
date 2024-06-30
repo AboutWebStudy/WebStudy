@@ -16,7 +16,8 @@ SYN → SYN-ACK → ACK 의 순서로 진행된다.
 
 서버는 위의 과정을 거친 최종ACK를 수신받았을 때 TCP 소켓연결이 설정된다.
 
-(그림첨부예정)
+![image](https://github.com/AboutWebStudy/WebStudy/assets/75903442/dec15584-0aa8-46db-9978-899f8332269f)
+
 
 ## 4-way-handshake
 
@@ -31,7 +32,7 @@ SYN → SYN-ACK → ACK 의 순서로 진행된다.
 
 위의 순서를 통해 A와 B의 소켓이 해제되는데 최초 **(1)**FIN요청을 받은 B는 A에게 **(2)**ACK신호를 줌과 동시에 연결을 끊는 작업을 시행하고 연결을 종료할 수 있는 준비작업이 완료되면 B가 A에게 최종종료되었다는 **(3)**FIN FLAG를 넘겨준다. 이를 받은 A는 최종확인 **(4)**ACK FLAG를 B에게 보냄으로써 소켓은 서로 닫히게 된다.
 
-(그림첨부예정)
+![image](https://github.com/AboutWebStudy/WebStudy/assets/75903442/0b5ca7f0-449f-4146-9ef7-2295d51b682e)
 
 # HTTP 통신
 
@@ -41,7 +42,9 @@ HTTP통신으로 호출하기 위한 흐름은 기본적으로 TCP 소켓 연결
 
 3-way-handshake → Request → Response → 4-way-handshake의 순서로 통신 흐름을 이해할 수 있다.
 
-(그림첨부예정)
+
+![image](https://github.com/AboutWebStudy/WebStudy/assets/75903442/828a5a15-23de-4663-8241-933a47b8be88)
+
 
 # HTTPS 통신
 
@@ -66,7 +69,8 @@ HTTPS는 Http에 S(Secure)가 붙어서 보안을 강화시킨 통신방식인�
 
 의 순서가 된다.
 
-(그림첨부예정)
+![image](https://github.com/AboutWebStudy/WebStudy/assets/75903442/349eb48b-a0e7-4195-a09d-2d346363245f)
+
 
 출처 : https://sh-safer.tistory.com/146
 
