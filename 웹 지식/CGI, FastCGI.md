@@ -24,17 +24,8 @@ CGI는 웹 서버에서 동적인 클라이언트의 요구에 응답하기 위�
 
 아래의 자료와 함께 Nginx Web Server를 예시로 설명을 하자면
 
-```jsx
-클라이언트 ----(HTTPS 요청)----> Nginx ----(FastCGI 요청)----> FastCGI API 바인딩 request
-    ^                                ^                                   |
-    |                                |                                   |
-HTTP/HTTPS                     FastCGI                         FastCGI API 바인딩 언어 실행
-    |                                |                                   v
-    |                                |<----(FastCGI 응답)----<-- FastCGI API 바인딩 response
-    |                                v
-    |<----(HTTPS 응답)----<-- Nginx
+![image](https://github.com/user-attachments/assets/554d704d-cca9-4b4c-89b5-33bcb0d5c298)
 
-```
 
 1. 클라이언트가 웹 서버에 보내는 HTTP 또는 HTTPS 요청
 2. Nginx에서 HTTPS요청이였다면 HTTP로 변환 후 FastCGI프로토콜로 다시 담아 FastCGI API를 지원하는 언어에 요청
