@@ -84,8 +84,10 @@
 1. Docker 데몬(dockerd)이 실행되면 /var/run/docker.sock 파일이 생성
     - 소켓 파일은 Unix 소켓을 통해 클라이언트와 데몬 간 통신을 담당하는 일종의 엔드포인트 역할
 2. 사용자가 docker 명령어를 입력하면, Docker 클라이언트는 이 명령을 HTTP 요청으로 변환하여 소켓 파일을 통해 데몬에게 전달
-    - Docker는 HTTP 기반 REST API를 사용하여 명령을 처리하며, 이 요청이 TCP 대신 Unix 소켓 파일을 통해 전달
+    - Docker는 HTTP 기반 REST API를 사용하여 명령을 처리하며, 이 요청이 TCP 대신 로컬 Unix 소켓 파일을 통해 전달
         - HTTP 통신 방식은 클라이언트가 HTTP 요청을 보내고, 서버가 HTTP 응답을 반환하는 패턴
+        - 여기서 `HTTP 기반`이라는 것은 명령어가 HTTP 프로토콜의 형식을 따르는 것을 의미하며, 실제 네트워크를 통한 HTTP 통신(TCP/IP)을 사용하지 않음
+        - Unix 소켓은 네트워크 없이 로컬에서 클라이언트와 데몬 간에 데이터 전송을 처리함
     - 예시
         - `docker ps`라는 명령어 실행 시, 클라이언트가 /containers/json이라는 HTTP 요청을 보내는 것으로 변환
             
