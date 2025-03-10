@@ -12,7 +12,7 @@ CREATE INDEX ix_teamname_userscore ON employees (team_name ASC, user_score DESC)
 
 **인덱스 스캔 방향**
 
-- 정렬이 되어 있기 때문에 인덱스 페이지의 위치를 끝값이나 첫값위치로3 옵티마이저가 부여
+- 정렬이 되어 있기 때문에 인덱스 페이지의 위치를 끝값이나 첫값위치로 옵티마이저가 부여
 
 **내림차순 인덱스**
 
