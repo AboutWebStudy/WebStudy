@@ -100,8 +100,8 @@ public class FlagExample {
       │ local cache │            │ local cache │
       │  running=T  │            │  running=F  │  ← stop() 호출됨
       └──────┬──────┘            └──────┬──────┘
-             │                           │
-             ▼                           ▼
+             │                          │
+             ▼                          ▼
          계속 루프 돈다          stop()에서 running = false로 설정
 
 ```
