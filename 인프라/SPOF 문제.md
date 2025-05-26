@@ -6,10 +6,8 @@ SPOF 문제는 개발 인프라를 구성할 때 빼 놓을 수 없는 고려점
 예를 들어, 클라이언트가 요청을 보내는 서버가 하나뿐이라면, 해당 서버에 장애가 발생할 경우 서비스를 이용할 수 없게 된다.
 
 다음은 웹 요청의 일반적인 흐름을 SPOF 관점에서 단순화한 예시이다.
+<img src="https://github.com/user-attachments/assets/b9f0c08d-5bd8-4697-80b0-55773129be69" width="600"/>
 
-```jsx
-Client -> L4 Load Balancer -> Proxy Server -> WAS -> Database
-```
 
 모든 인프라에서 SPOF를 고려하기 위해 위와 같은 예시를 들었으며, 각 계층별로 SPOF는 반드시 고려해봐야 할 문제이다.
 
