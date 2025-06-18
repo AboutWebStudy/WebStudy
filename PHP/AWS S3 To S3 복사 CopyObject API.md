@@ -38,7 +38,7 @@ AWS 콘솔에서 iam 계정 번호를 준비해, 사용할 버킷 A, B에 아래
             ],
             "Resource": [
                 "arn:aws:s3:::your_bucket",
-                "arn:aws:s3:::your_bucket*"
+                "arn:aws:s3:::your_bucket/*"
             ]
         }
     ]
